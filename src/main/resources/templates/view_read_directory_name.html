@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Чтение справочника</title>
+    <link rel="stylesheet" th:href="@{/css/style2.css}"/>
+</head>
+<body>
+<nav>
+    <p>
+        <a href="/"> Главная страница</a>
+    </p>
+</nav>
+<h3>Введите данные для поиска</h3>
+<form method="post" th:action="@{/read_directory_name}" th:object="${region}">
+    <div>
+        <label>Наименование региона
+            <input th:field="*{nameRegion}" type="text">
+        </label>
+    </div>
+    <p>
+        <input type="submit" value="Поиск">
+    </p>
+</form>
+<h3>Результат поиска</h3>
+<div>
+    <label>Идентификатор региона(id):&nbsp;&nbsp;
+        <td th:text="${region.id}"/>
+    </label>
+</div>
+<div>
+    <label>Наименование региона:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td th:text="${{region.nameRegion}}"/>
+    </label>
+</div>
+<div>
+    <label>Сокращенное наименование:&nbsp;
+        <td th:text="${{region.shortNameRegion}}"/>
+    </label>
+</div>
+<img th:src="@{img/map.jpg}">
+</body>
+</html>

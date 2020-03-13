@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav>
+    <p>
+    <a href="/"> Главная страница</a>
+    </p>
+</nav>
+   <nav>
+       <a href="/read_directory_id"> <big><b>Поиск по идентификатору (id)</b></big> </a>
+       <a href="/read_directory_name"> <big><b>Наименованию региона</b></big></a>
+       <a href="/read_directory_short_name"> <big><b>Поиск по сокращенному наименованию</b></big></a>
+   </nav>
+   <img th:src="@{img/map.jpg}">
+</body>
+</html>

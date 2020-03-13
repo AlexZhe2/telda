@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav>
+    <p>
+        <a href="/"> Главная страница</a>
+    </p>
+</nav>
+<nav>
+    <a href="/change_directory_add"> <big><b>Добавить запись в справочник</b></big></a>
+    <a href="/change_directory_correction"> <big><b>Корректировать справочник</b></big></a>
+</nav>
+<img th:src="@{img/map.jpg}">
+</body>
+</html>
